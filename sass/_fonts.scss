@@ -8,5 +8,11 @@
     src: url(../fonts/Roboto-Regular.ttf);
 }
 
+@font-face{
+    font-family: 'Lora-Regular';
+    src: url(../fonts/Lora-Regular.ttf);
+}
+
 $heading-font : 'Lora-Bold';
+$light-heading-font : 'Lora-Regular';
 $text-font: 'Roboto-Regular';

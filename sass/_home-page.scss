@@ -27,12 +27,26 @@ header {
 }
 
 .morning-text {
-   // ?background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+   // background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
    color: #f4f4f4;
-   font-family: $text-font;
-   font-size: 2.5rem;
+   font-family: $light-heading-font;
+   font-size: 2.8rem;
    padding: 1.2em;
+   font-weight: lighter;
    // mix-blend-mode: screen;
+
+   .btn{
+      font-family: $heading-font;
+      text-transform: capitalize;
+      background-color: #e1e1e1;
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: black;
+      border-radius: 30px;
+      margin-top: 1em;
+      padding: 0.7em;
+   }
+
 }
 
 .weather-app-wrapper {

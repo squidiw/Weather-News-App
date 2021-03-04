@@ -2,9 +2,11 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   scroll-behavior: smooth;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-smoothing: grayscale;
 }
 
 @import "fonts";
 @import "home-page";
 @import "news";
-
