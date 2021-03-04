@@ -1,7 +1,7 @@
 // SHOW DAY AND TIME
-         var today = new Date();
-         var day = today.getDay();
-         var daylist = [
+         let today = new Date();
+         let day = today.getDay();
+         let daylist = [
             "Sunday",
             "Monday",
             "Tuesday",
@@ -10,11 +10,28 @@
             "Friday",
             "Saturday",
          ];
+         let month = today.getMonth();
+         let monthlist = [
+             "Jan",
+             "Feb",
+             "Mar",
+             "Apr",
+             "May",
+             "Jun",
+             "Jul",
+             "Aug",
+             "Sep",
+             "Oct",
+             "Nov",
+             "Dec",
+         ]
+
+         let date = `${today.getFullYear()} - ${monthlist[month]} - ${today.getDate()}`;
     
-         var hour = today.getHours();
-         var minute = today.getMinutes();
-         var second = today.getSeconds();
-         var prepand = hour >= 12 ? " PM " : " AM ";
+         let hour = today.getHours();
+         let minute = today.getMinutes();
+         let second = today.getSeconds();
+         let prepand = hour >= 12 ? " PM " : " AM ";
          hour = hour >= 12 ? hour - 12 : hour;
          if (hour === 0 && prepand === " PM ") {
             if (minute === 0 && second === 0) {
@@ -35,5 +52,5 @@
             }
          }
 
-         document.getElementById('current_day').innerHTML = `It's ${daylist[day]},`;
-         document.getElementById('current_time').innerHTML = `The time is : ${hour} : 0${minute} ${prepand}`
+         document.getElementById('current_day').innerHTML = `It's ${daylist[day]}, ${date}`;
+         document.getElementById('current_time').innerHTML = `The time is : ${hour} : ${minute} ${prepand}`
