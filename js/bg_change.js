@@ -18,4 +18,6 @@ let images = [
 setInterval(function(){
     let bg = images[Math.floor(Math.random() * images.length ) ];
     header.style.background = bg;
-}, 10000);
+    header.style.backgroundSize = 'cover';
+    header.style.backgroundRepeat = 'no-repeat';
+}, 5000);

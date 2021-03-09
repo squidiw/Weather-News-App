@@ -26,11 +26,13 @@
              "Dec",
          ]
 
-         let date = `${today.getFullYear()} - ${monthlist[month]} - ${today.getDate()}`;
+         let date = `${monthlist[month]} / ${today.getDate()} / ${today.getFullYear()}  `;
     
          let hour = today.getHours();
          let minute = today.getMinutes();
+         minute = minute < 10 ? '0' + minute : minute;
          let second = today.getSeconds();
+         if( second < 10 ) { second = '0' + second;}
          let prepand = hour >= 12 ? " PM " : " AM ";
          hour = hour >= 12 ? hour - 12 : hour;
          if (hour === 0 && prepand === " PM ") {
@@ -53,4 +55,4 @@
          }
 
          document.getElementById('current_day').innerHTML = `It's ${daylist[day]}, ${date}`;
-         document.getElementById('current_time').innerHTML = `The time is : ${hour} : ${minute} ${prepand}`
+         document.getElementById('current_time').innerHTML = `Time is ${hour} : ${minute} ${prepand}`

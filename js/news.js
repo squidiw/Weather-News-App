@@ -15,7 +15,7 @@ function getNews() {
          return data;
       })
       .then(function (data) {
-         // console.log(data);
+         console.log(data);
          data.articles.forEach((article, index) => {
             title[index].innerHTML = article.title;
             image[index].style.backgroundImage = `url(${article.image})`;
